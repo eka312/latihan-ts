@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.login-page{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.login-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #4175e4;
+}
+
+.login-container{
+    width: 100%;
+    max-width: 510px;
+    background: #fff;
+    border-radius: 0.5rem ;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-container .form-title{
+    text-align: center;
+    font-size: 1.60rem;
+    font-weight: 600;
+    margin-bottom: 1.87rem;
+    color:black;
+    font-family: "Montserrat", sans-serif;
+}
+
+.login-container .social-login{
+    display: flex;
+    gap: 2rem;
+}
+
+.social-login .social-btn{
+    display: flex;
+    width: 100%;
+    gap: 0.78rem;
+    cursor:pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.75rem 0;
+    align-items: center;
+    border-radius: 0.32rem;
+    justify-content: center;
+    border: 1px solid #D5CBFF;
+    transition: 0.3s ease;
+}
+
+.social-login .social-btn img{
+    width: 34px;
+    height: 34px;
+}
+
+.social-login .social-btn:hover{
+    background-color: #D5CBFF;
+    border-color: #415fe4;
+}
+
+.social-login .social-btn .social-icon{
+    width: 23px;
+}
+
+.login-container .separator{
+    position: relative;
+    margin:1.5rem 0;
+    text-align: center;
+    color:#999;
+    font-size: 18px;
+}
+
+.login-container .separator::before{
+    position:absolute;
+    content:  "";
+    right: 0;
+    top: 50%;
+    width: 46.8%;
+    height: 1px;
+    background: #bfb3f2;
+}
+.login-container .separator::after{
+    position:absolute;
+    content:  "";
+    left: 0;
+    top: 50%;
+    width: 46.8%;
+    height: 1px;
+    background: #bfb3f2;
+
+}
+
+.login-form .input-wrapper{
+    height: 54px;
+    width: 100%;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.login-form .input-wrapper .input-field{
+    height:100%;
+    width: 100%;
+    outline: none;
+    font-size: 1.06rem;
+    border-radius: 0.31rem;
+    border: 1px solid #bfb3f2;
+    padding: 0 1.25rem 0 3.12rem;
+    transition: 0.2s ease;
+    box-sizing: border-box;
+}
+
+.login-form .input-wrapper .input-field:focus{
+    border-color: #415fe4;
+    box-shadow: 0 0 0 2px rgba(95, 65, 228, 0.2);
+}
+
+.login-form .input-wrapper .input-field::placeholder{
+    color: #95afe0;
+
+}
+
+.login-form .input-wrapper i{
+    color: #95afe0;
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+    transition: 0.2s ease;
+}
+
+.login-form .input-wrapper i:not(.eye-icon) {
+    left: 0.9rem;
+    pointer-events: none;
+}
+
+.login-form .input-wrapper .input-field:focus ~ i:not(.eye-icon){
+    color:#415fe4;
+}
+
+.login-form .input-wrapper i.eye-icon{
+    font-size: 1.25rem;
+    cursor: pointer;
+    right: 0.9rem;
+    display: none;
+}
+
+.login-form .input-wrapper .input-field:valid ~ i.eye-icon{
+    display: block;
+}
+
+.login-form .forgot-pass-link{
+    display: block;
+    width: fit-content;
+    margin-top: -0.46rem;
+}
+
+.login-form .login-btn{
+    width: 100%;
+    height: 54px;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    font-weight: 500;
+    font-size:1.380rem;
+    background: #415fe4;
+    margin-top: 2.19rem;
+    border-radius: 0.31rem;
+    transition: 0.2s ease;
+    border: none;
+}
+
+.login-form .login-btn:hover{
+    background: #353ec2;
+}
+
+.login-form .alert{
+    color: red;
+    margin-bottom: 10px;
+}
+
+.login-container .signup-text{
+    text-align: center;
+    margin:1.75rem 0 0.31rem;
+    font-weight: 500;
+
+}
+
+.login-container a{
+    color:#415fe4;
+    font-weight: 500;
+    text-emphasis: none;
+}
+
+.login-container a:hover{
+    text-decoration: underline;
+    color: #353ec2;
+}

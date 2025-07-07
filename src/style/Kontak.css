@@ -1,0 +1,12 @@
+#kontak {
+    background: hsl(0, 0%, 87%);
+    padding:  35px;
+    
+}
+
+.footer {
+    width: 94%;
+    position: relative;
+    display: flex;
+    
+}

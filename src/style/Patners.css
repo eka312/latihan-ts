@@ -1,0 +1,16 @@
+.patner-list{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.kartu-patner{
+    width: 20%;
+    margin: 0 auto;
+}
+
+.kartu-patner img{
+    width: 120%;
+    border-radius: 50px;
+}

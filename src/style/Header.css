@@ -1,0 +1,15 @@
+.header{
+    font-family: 'Segoe UI', sans-serif; 
+}
+
+.header h3{
+    color: #374151;
+    font-size: 24px;
+}
+
+.header p{
+    color: #6b7280;
+    font-size: 16px;
+    padding-top: 0px;
+    margin-top: 3px;
+}
