@@ -11,7 +11,7 @@
     z-index: 999;
 }
 
-.modal-konten{
+.modal-konten-hapus{
     width: 25%;
     height: 20%;
     background: white;
@@ -21,7 +21,7 @@
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
-.modal-konten h4{
+.modal-konten-hapus h4{
     margin-top: 20px;
 }
 
