@@ -2,14 +2,26 @@ import { useState } from "react";
 import Sidebar from "../komponen/Sidebar";
 import Header from "../komponen/Header";
 import '../style/Dashboard.css';
+import type  {ProjekType } from "../data/ProjekList";
+
+type DashboardProps = {
+  projekList: ProjekType[];
+};
 
 
-function Dashboard() {
+function Dashboard({ projekList }: DashboardProps) {
   const [isOpen, setIsOpen] = useState(true);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
+
+  const totalProjek =  projekList.length;
+  const totalSelesai = projekList.filter((p) => p.status.toLowerCase() === "selesai").length;
+  const totalProses = projekList.filter((p) => p.status.toLowerCase() === "proses").length;
+
+
+
 
   return (
     <>
@@ -20,15 +32,15 @@ function Dashboard() {
           <div className="cards">
             <div className="card">
               <h4>Total Projek</h4>
-              <p>5</p>
+              <p>{totalProjek}</p>
             </div>
             <div className="card">
               <h4>Tugas Aktif</h4>
-              <p>2</p>
+              <p>{totalProses}</p>
             </div>
             <div className="card">
               <h4>Selesai</h4>
-              <p>3</p>
+              <p>{totalSelesai}</p>
             </div>
           </div>
         </div>

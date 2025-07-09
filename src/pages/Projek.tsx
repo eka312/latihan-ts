@@ -3,22 +3,20 @@ import Sidebar from "../komponen/Sidebar";
 import Tambah from "../komponen/Tambah";                     
 import '../style/Projek.css';
 import { FaEdit, FaFolderOpen, FaPlus, FaTrash } from "react-icons/fa";
-import { projekList as defaultProjekList } from "../data/ProjekList";
 import type { ProjekType } from "../data/ProjekList";
 import Edit from "../komponen/Edit";
 import Hapus from "../komponen/Hapus";
 
+type ProjekProps = {
+    projekList: ProjekType[];
+    setProjekList: React.Dispatch<React.SetStateAction<ProjekType[]>>;
+}
 
 
 
-
-function Projek() {
+function Projek({projekList, setProjekList}: ProjekProps) {
     const [isOpen, setIsOpen] = useState(true);
     const [showForm, setShowForm] = useState(false);
-    const [projekList, setProjekList] = useState<ProjekType[]>(() => {
-        const stored = localStorage.getItem('projekList');
-        return stored ? JSON.parse(stored) : defaultProjekList;
-    });
     const [editIndex, setEditIndex] = useState<number | null >(null);
     const [hapusIndex, setHapusIndex] = useState<number | null>(null);
 
